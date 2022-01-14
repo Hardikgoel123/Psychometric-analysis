@@ -1,5 +1,5 @@
-#CODE-KARO-YAARO
-# Personality Prediction from Text
+
+# CODE KRO YAARO Personality Prediction from Text
 ## Description
 - Data on personality types was gathered (MBTI and big five) for further information, see below.
 - The situation on the data was evaluated. There is much more MBTI data available which is scientifically less reliant, but there is only very few data on the BIG FIVE traits. Machine Learning algorithms thrive on data so a approach created to combine MBTI and BIG Five data. 
@@ -10,11 +10,6 @@
 - a predictor was developed who predicts traits and visualizes them:
 
 ![Image](https://github.com/joegog/personality-detection-text/blob/master/docu/predict.PNG?raw=true)
-
-## Motivation
-Inspired by [the paper from sentic.net](https://sentic.net/deep-learning-based-personality-detection.pdf) this topic was chosen during  studies at University of applied Sciences Wiener Neustadt, Computer Science, Data Science. Some time was spent on [Dr. Jordan B. Petersons Personality lectures](https://www.youtube.com/playlist?list=PL22J3VaeABQApSdW8X71Ihe34eKN6XhCi) and some understanding was gathered on the BIG FIVE personality model and its applications. As I'm continuously stunned by the complexity of the human psyche, the motivations and desires of human beings I am of course also fascinated by Machine Learning applications, which are nothing else than the pursue to reverse engineer the human brain and discover the yet unknown algoritm of the human brain. 
-So this first machine learning python application marks my start in the huge world of machine learning and artificial intelligence, please be critical.
-
 ## The big five personality model
 The Big Five personality traits, also known as the five-factor model (FFM) and the OCEAN model, is a taxonomy, or grouping, for personality traits.
 The five factors are:
@@ -27,7 +22,6 @@ The five factors are:
 ## The Myers–Briggs Type Indicator 
 The Myers–Briggs Type Indicator (MBTI) is an introspective self-report questionnaire indicating differing psychological preferences in how people perceive the world and make decisions. 
 
-
 | _             | Subjective                | Objective                           |
 | ------------- |:-------------:            | --------------------------------:   |
 | Deductive     | **I**ntuition/**S**ensing |  **I**ntroversion/**E**xtraversion	|
@@ -36,8 +30,7 @@ The Myers–Briggs Type Indicator (MBTI) is an introspective self-report questio
 The combinations as four pairs of preferences lead to 16 possible combinations aka types. The 16 types are typically referred to by an abbreviation of four letters—the initial letters of each of their four type preferences (except in the case of intuition, which uses the abbreviation "N" to distinguish it from introversion). For instance:
 
 ESTJ: extraversion (E), sensing (S), thinking (T), judgment (J)
-INFP: introversion (I), intuition (N), feeling (F), perception (P)
- 	              	
+INFP: introversion (I), intuition (N), feeling (F), perception (P)	              	
 
 ## Differences and commonalities of the Big Five and MBTI
 
@@ -62,10 +55,7 @@ Adrian Furnham 1996 concludes a corellation of his 1996 paper [The big five vers
 | :-------------:| :--------:   |  :--------:   |  :--------:   | :--------:   |
 |   77.18    | 61.74|  75.51  | 70.34 | 80.39 |
 
-for detailed results 
-
-# Tech overview 
-## data for training
+## Dataset used
 ### stream of consciousness essays "data/essays.csv"
 This is the scientific gold standard from psychology, controlled environment collected stream of consciousness by James Pennebaker and Laura King labelled with Big Five personality traits. See: http://web.archive.org/web/20160519045708/http://mypersonality.org/wiki/doku.php?id=wcpr13
 
@@ -76,10 +66,7 @@ https://www.saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm
 ### (MBTI) Myers-Briggs Personality Type Dataset "mbti_1.csv"
 From [Kaggle](https://www.kaggle.com/datasnaek/mbti-type): This data was collected through the [PersonalityCafe forum(https://www.personalitycafe.com/forum/), as it provides a large selection of people and their MBTI personality type, as well as what they have written.
 
-
-
 ## Used Methods
-
 ### Classification
 - SVM (sklearn)
 - Decision Tree (sklearn)
@@ -87,16 +74,9 @@ From [Kaggle](https://www.kaggle.com/datasnaek/mbti-type): This data was collect
 - Logistic Regression (sklearn)
 - Random Forest (sklearn)
 
-
 # repo overview / how to use
 
 ## if you just want to run pretrained models
 1) just work with predict.ipynb and use your own text on the variable "text"
 2) done, have fun predicting
 3) if you want, check analysis_results.ipynb - this compares the feature extractions and classifiers in their score
-
-
-further info: essay.py
-the class to save various data about the essays required
-
-
