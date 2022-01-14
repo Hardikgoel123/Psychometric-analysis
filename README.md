@@ -56,14 +56,7 @@ Adrian Furnham 1996 concludes a corellation of his 1996 paper [The big five vers
 |   77.18    | 61.74|  75.51  | 70.34 | 80.39 |
 
 ## Dataset used
-### stream of consciousness essays "data/essays.csv"
-This is the scientific gold standard from psychology, controlled environment collected stream of consciousness by James Pennebaker and Laura King labelled with Big Five personality traits. See: http://web.archive.org/web/20160519045708/http://mypersonality.org/wiki/doku.php?id=wcpr13
-
-### emotion lexicon "data/Emotion_Lexicon.csv"
-For scentence filtering a lexicon containing ~ 14,000 words was used. Further Information:
-https://www.saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm
-
-### (MBTI) Myers-Briggs Personality Type Dataset "mbti_1.csv"
+### Personality Type Dataset "mbti_1.csv"
 From [Kaggle](https://www.kaggle.com/datasnaek/mbti-type): This data was collected through the [PersonalityCafe forum(https://www.personalitycafe.com/forum/), as it provides a large selection of people and their MBTI personality type, as well as what they have written.
 
 ## Used Methods
@@ -77,6 +70,4 @@ From [Kaggle](https://www.kaggle.com/datasnaek/mbti-type): This data was collect
 # repo overview / how to use
 
 ## if you just want to run pretrained models
-1) just work with predict.ipynb and use your own text on the variable "text"
-2) done, have fun predicting
-3) if you want, check analysis_results.ipynb - this compares the feature extractions and classifiers in their score
+just open predict.ipynb and use your own text on the variable "text" if you want, check analysis_results.ipynb - this compares the feature extractions and classifiers in their score
