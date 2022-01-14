@@ -23,8 +23,6 @@ The five factors are:
 - Agreeableness (friendly/compassionate vs. challenging/detached)
 - Neuroticism (sensitive/nervous vs. secure/confident)
 
-Quoted from and further information: https://en.wikipedia.org/wiki/Big_Five_personality_traits
-
 ## The Myers–Briggs Type Indicator 
 The Myers–Briggs Type Indicator (MBTI) is an introspective self-report questionnaire indicating differing psychological preferences in how people perceive the world and make decisions. 
 
@@ -39,7 +37,6 @@ The combinations as four pairs of preferences lead to 16 possible combinations a
 ESTJ: extraversion (E), sensing (S), thinking (T), judgment (J)
 INFP: introversion (I), intuition (N), feeling (F), perception (P)
  	              	
-Quoted from and further information: https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator
 
 ## Differences and commonalities of the Big Five and MBTI
 
@@ -78,9 +75,7 @@ https://www.saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm
 ### (MBTI) Myers-Briggs Personality Type Dataset "mbti_1.csv"
 From [Kaggle](https://www.kaggle.com/datasnaek/mbti-type): This data was collected through the [PersonalityCafe forum(https://www.personalitycafe.com/forum/), as it provides a large selection of people and their MBTI personality type, as well as what they have written.
 
-### scraped data from reddit from "typed_comments.csv"
-Props to Matej Gjurković, and his 2018 paper [Reddit: A Gold Mine for Personality Prediction](https://www.researchgate.net/publication/325445581_Reddit_A_Gold_Mine_for_Personality_Prediction) who provided me his scraped data from personality subreddits, where people show their personality types in the forum and therfore provide labelled text comments and posts.
-I cannot share the data.
+
 
 ## Used Methods
 
@@ -91,37 +86,14 @@ I cannot share the data.
 - Logistic Regression (sklearn)
 - Random Forest (sklearn)
 
-### Feature extraction
-- Bags of Words (sklearn CountVectorizer)
-- GloVe pretrained https://nlp.stanford.edu/projects/glove/
-
-### scentence filtering
-- scentences which contain no emotional charge (meaning they contain no word of the emotion lexicon) will be removed before further preprocessing.
-
-
-### combining MBTI and BIG FIVE data
-MBTI and BIG FIVE data was combined on the corellating traits. therefore the trait "neuroticism" from big five was lost. this explains the weaker results in the trait Neuroticism (NEU)
 
 # repo overview / how to use
 
-## if you just want to run with my pretrained models
+## if you just want to run pretrained models
 1) just work with predict.ipynb and use your own text on the variable "text"
 2) done, have fun predicting
 3) if you want, check analysis_results.ipynb - this compares the feature extractions and classifiers in their score
 
-## if you want to train on your own (with gloVe)
-1) download glove pretrained models and put in the folder data/pretrained:
-  - http://nlp.stanford.edu/data/glove.840B.300d.zip
-  - http://nlp.stanford.edu/data/glove.6B.zip
-2) run preprocessing.ipynb
-   - choose the data you want to combine (essays, kaggle mbti, and if you have access reddit) 
-   - this saves the preprocessed data in data/essays
-   - this is required for further use to run the models
-3)  run model_glove.ipynb for using preprocessing with GloVe
-    OR
-    run model_bow.ipynb for using preprocessing with Bags of Words and sklearn CountVectorizer
-4) work with predict.ipynb and use your own text on the variable "text"
-5) if you want, check analysis_results.ipynb - this compares the feature extractions and classifiers in their score
 
 further info: essay.py
 the class to save various data about the essays required
